@@ -3,4 +3,4 @@
 # función retorna la cantidad de números primos encontrados. Modularizar todo lo posible.
 
 from Calculos import calcular_primos 
-calcular_primos(29)
+calcular_primos(7)

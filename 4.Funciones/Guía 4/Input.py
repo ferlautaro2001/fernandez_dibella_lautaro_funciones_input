@@ -20,27 +20,16 @@ def get_int(mensaje: str, mensaje_error: str, minimo: int, maximo: int, reintent
     print(mensaje)
     numero_validado = None
 
-    for intento_actual in range(reintentos + 1): # Un intento inicial + 'reintentos' adicionales
+    for intento_actual in range(reintentos + 1): 
         entrada_usuario = input("Ingrese el número entero: ")
-
-        # Conversión directa a entero.
-        # Si 'entrada_usuario' no es una cadena numérica válida para int(),
-        # la siguiente línea CAUSARÁ UN ValueError Y EL PROGRAMA SE DETENDRÁ.
         valor_actual_int = int(entrada_usuario)
-
-        # Validación de rango usando la función de Validate.py
         if Validate.validate_number(valor_actual_int, minimo, maximo):
             numero_validado = valor_actual_int
-            break  # Número válido encontrado, salir del bucle de reintentos
+            break  
         else:
-            # Error de rango (la conversión a int fue exitosa)
             print(mensaje_error)
-            # Si este fue el último intento permitido (intento_actual == reintentos),
-            # el bucle terminará y se retornará numero_validado (que sería None si nunca se validó).
             if intento_actual == reintentos:
-                print("Se han agotado los reintentos para el ingreso dentro del rango.")
-
-
+                print("Se han agotado los reintentos para el ingreso dentro del rango.") 
     return numero_validado
 
 

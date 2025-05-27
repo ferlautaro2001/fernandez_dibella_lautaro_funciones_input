@@ -13,7 +13,6 @@ def jugar_piedra_papel_tijera() -> str:
     ronda_actual = 1
     victorias_consecutivas_jugador = 0
     victorias_consecutivas_maquina = 0
-    
     ganador_final_partida = ""
 
     print("¡Bienvenido a Piedra, Papel o Tijera!")

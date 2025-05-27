@@ -11,7 +11,7 @@ def calcular_primos(numero)->int:
             print(i)
             contador_primos += 1
 
-    resultado = print(f"Números primos entre 1 y {numero} es {contador_primos}:")
+    resultado = print(f"Hay {contador_primos} primos entre 1 y {numero}")
     return resultado
 
 
